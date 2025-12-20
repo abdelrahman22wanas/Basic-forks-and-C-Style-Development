@@ -1,0 +1,60 @@
+CSE233 - Assignment 2: Answers and Explanations
+------------------------------------------------
+
+1) Explain each code example from Lab 5 (brief):
+
+- process_creation.c
+  Demonstrates creating a new process using fork(). fork() returns
+  -1 on failure, 0 to the child process, and the child's PID to the parent.
+  After fork(), both parent and child continue execution from the point
+  immediately after the call. Typical uses include creating worker processes,
+  implementing concurrent behavior, or spawning helper tasks.
+
+- file1.c + file2.c (linker example)
+  file1.c defines a function `hello()` and file2.c declares the function and
+  calls it from `main()`. The linker resolves the symbol `hello` when the two
+  object files are linked together. If one of the object files is missing or the
+  symbol is undefined, linking will fail with an "undefined reference" error.
+
+- simple_program.c (loader example)
+  A trivial program that prints a message. The `ldd` tool can be used to list
+  dynamic shared libraries that will be loaded at runtime (by the loader). The
+  loader is responsible for preparing the program for execution — mapping the
+  executable into memory, resolving dynamic symbols, and arranging the process
+  address space so the program can run.
+
+- background_demo.sh
+  A small shell script that starts `sleep 300` in the background, prints the PID,
+  and explains how to use `jobs`, `ps`, and `kill` (including STOP/CONT signals)
+  to control the background process.
+
+2) What is the job of the Linker?
+  The linker combines one or more object files produced by the compiler into a
+  single executable (or shared library). Its responsibilities include:
+  - Resolving symbol references between object files (matching calls to definitions).
+  - Relocating code and data by patching addresses so object files can coexist in
+    a single address space.
+  - Combining sections (text, data) and producing the final binary image.
+  - Optionally performing optimizations (like dead code removal) and producing
+    shared libraries or position-independent code when requested.
+
+3) What is the job of the Loader?
+  The loader (part of the OS) is responsible for preparing and starting a program
+  at runtime. Key tasks include:
+  - Loading the executable file into memory (mapping program segments).
+  - Resolving dynamic symbols by consulting dynamic linkers and shared libraries.
+  - Setting up the process stack, heap, and registers (including program counter).
+  - Transferring control to the program's entry point so it begins execution.
+  Tools like `ldd` show which shared libraries will be consulted by the loader.
+
+4) Makefile
+  A Makefile is provided that builds all examples and has helpful targets such as
+  run_process_creation, run_linked_program, run_simple_program, and ldd_simple.
+
+5) Notes about screenshots
+  - On your machine: run `make` then `make run_process_creation` and take a screenshot
+    of the output. Repeat for the linked program and `ldd` results for the simple program.
+  - Include the screenshots in your GitHub repository (or as separate image files)
+    before submitting the assignment link.
+
+End of answers.
