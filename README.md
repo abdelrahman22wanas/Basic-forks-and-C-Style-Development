@@ -1,4 +1,4 @@
-# CSE233 - Assignment 2 (Lab 5: Process Management)
+#  Process Management
 
 ## Overview
 This repository contains the code examples and explanations required by **Assignment 2** for the Operating Systems course (CSE233). The exercises follow Lab 5 and demonstrate:
