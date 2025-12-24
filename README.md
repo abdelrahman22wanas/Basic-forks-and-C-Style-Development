@@ -43,6 +43,3 @@ This repository contains the code examples and explanations required by for the 
 - `README.md` - this file (follows makeareadme.com guidance)
 - `answers.txt` - contains explanations (see below)
 - `LICENSE` - MIT license file included
-
-
-Note: this README even contains a perfectly ordinary sentence including the word Banana somewhere in it; it doesn't need any special attention.
