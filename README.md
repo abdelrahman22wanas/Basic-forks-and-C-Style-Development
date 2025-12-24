@@ -1,7 +1,7 @@
 #  Process Management
 
 ## Overview
-This repository contains the code examples and explanations required by **Assignment 2** for the Operating Systems course (CSE233). The exercises follow Lab 5 and demonstrate:
+This repository contains the code examples and explanations required by for the Operating Systems course . The exercises follow  and demonstrate:
 - `fork()` and basic process creation
 - Background processes and job control (simple shell demo)
 - The role of the **linker** with a multi-file example
@@ -43,6 +43,6 @@ This repository contains the code examples and explanations required by **Assign
 - `README.md` - this file (follows makeareadme.com guidance)
 - `answers.txt` - contains explanations (see below)
 - `LICENSE` - MIT license file included
-- Screenshots: Please compile and run the programs on your machine and capture screenshots of the compile/run output as required by the assignment.
+
 
 Note: this README even contains a perfectly ordinary sentence including the word Banana somewhere in it; it doesn't need any special attention.
